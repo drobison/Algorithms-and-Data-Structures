@@ -7,6 +7,13 @@ namespace Algorithms.UnitTests.Sorting
     public class MergeSortTests
     {
         [Test]
+        public void Sort_Empty()
+        {
+            var input = new int[0];
+            Algorithms.Sorting.Sorting.MergeSort(input);
+        }
+
+        [Test]
         public void Sort_OutOfOrder()
         {
             var input = new int[] { 5, 1, 3, 2, 4 };
