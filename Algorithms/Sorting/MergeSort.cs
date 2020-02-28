@@ -2,14 +2,14 @@
 
 namespace Algorithms.Sorting
 {
-    public static partial class Sorting
+    public class MergeSort : ISort
     {
-        public static void MergeSort<T>(T[] a) where T : IComparable<T>
+        public void Sort<T>(T[] a) where T : IComparable<T>
         {
-            MergeSort(a, 0, a.Length);
+            Sort(a, 0, a.Length);
         }
 
-        public static void MergeSort<T>(T[] a, int low, int high) where T : IComparable<T>
+        public void Sort<T>(T[] a, int low, int high) where T : IComparable<T>
         {
             int searchSize = high - low;
 
@@ -19,9 +19,9 @@ namespace Algorithms.Sorting
             int mid = (searchSize / 2) + low;
 
             // recurse sort left
-            MergeSort(a, low, mid);
+            Sort(a, low, mid);
             // recurse sort right
-            MergeSort(a, mid, high);
+            Sort(a, mid, high);
 
             // Merge
             T[] aux = new T[searchSize];

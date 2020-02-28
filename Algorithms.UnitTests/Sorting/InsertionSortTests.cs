@@ -4,12 +4,12 @@ using NUnit.Framework;
 namespace Algorithms.UnitTests.Sorting
 {
     [TestFixture]
-    public class MergeSortTests : BaseSortTests
+    public class InsertionSortTests : BaseSortTests
     {
         [SetUp]
         public void Setup()
         {
-            Sut = new MergeSort();
+            Sut = new InsertionSort();
         }
     }
 }
